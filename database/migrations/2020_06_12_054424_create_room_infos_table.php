@@ -14,11 +14,11 @@ class CreateRoomInfosTable extends Migration
     public function up()
     {
         Schema::create('room_infos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('room_no');
-            $table->integer('floor');
+            $table->string('floor');
             $table->float('rent_fee');
-            $table->boolean('status');
+            $table->enum('status', array('Available','Busy'))->default('Available');
             $table->timestamps();
         });
     }

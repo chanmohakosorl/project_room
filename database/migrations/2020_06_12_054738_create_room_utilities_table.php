@@ -14,14 +14,16 @@ class CreateRoomUtilitiesTable extends Migration
     public function up()
     {
         Schema::create('room_utilities', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->date('month');
+            $table->string('water_old_counter');
+            $table->string('water_new_counter');
+            $table->string('electricity_old_counter');
+            $table->string('electricity_new_counter');
             $table->integer('room_info_id')->unsigned();
-            $table->string('month');
-            $table->integer('water_old_counter');
-            $table->integer('water_new_counter');
-            $table->timestamps();
-
             $table->foreign('room_info_id')->references('id')->on('room_infos')->onDelete('cascade');
+            $table->timestamps();
+            
         });
     }
 
