@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use \App\RoomInfo;
 class RoomInfoController extends Controller
 {
     /**
@@ -13,7 +13,9 @@ class RoomInfoController extends Controller
      */
     public function index()
     {
-        return view('room_info.index');
+        $room_infos= RoomInfo::all();
+        return view('room_info.index')->with('room_infos',$room_infos);
+        //return view('room_info.index');
     }
 
     /**
@@ -34,7 +36,8 @@ class RoomInfoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        RoomInfo::create($request->all());
+        return redirect()->route('room-infos.index');
     }
 
     /**
@@ -56,7 +59,9 @@ class RoomInfoController extends Controller
      */
     public function edit($id)
     {
-        return view('room_info.update');
+        //return view('room_info.update');
+        $room_infos= RoomInfo::findOrFail($id);
+        return view('room_info.update')->with('room_infos',$room_infos);
     }
 
     /**
@@ -69,6 +74,8 @@ class RoomInfoController extends Controller
     public function update(Request $request, $id)
     {
         //return view('room_info.update');
+        RoomInfo::findOrFail($id)->update($request->all());
+        return redirect()->route('room-infos.index');
     }
 
     /**
@@ -79,6 +86,8 @@ class RoomInfoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $room_info = RoomInfo::find($id);
+        $room_info->delete();
+        return redirect()->route('room-infos.index');
     }
 }
