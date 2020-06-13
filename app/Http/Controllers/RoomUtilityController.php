@@ -13,7 +13,7 @@ class RoomUtilityController extends Controller
      */
     public function index()
     {
-        //
+        return view('room_utility.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class RoomUtilityController extends Controller
      */
     public function create()
     {
-        //
+        return view('room_utility.create');
     }
 
     /**
@@ -56,7 +56,7 @@ class RoomUtilityController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('room_utility.update');
     }
 
     /**

@@ -26,6 +26,10 @@
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
                         </div>
+                        <div class="form-group float-right">
+                            <button class="btn btn-warning btn-md">Cancel</button>
+                            <button class="btn btn-primary btn-md">Create</button>
+                        </div>
                     </form>
                 </div>
             </div>
