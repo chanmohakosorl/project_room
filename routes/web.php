@@ -23,3 +23,7 @@ Route::get('/{id}/edit-room-info', 'RoomInfoController@edit');
 //Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/room-utility', 'RoomUtilityController@index');
+Route::get('/create-room-utility', 'RoomUtilityController@create');
+Route::get('/{id}/edit-room-utility', 'RoomUtilityController@create');
