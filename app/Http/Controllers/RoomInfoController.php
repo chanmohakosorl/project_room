@@ -13,7 +13,7 @@ class RoomInfoController extends Controller
      */
     public function index()
     {
-        //
+        return view('room_info.index');
     }
 
     /**
@@ -56,7 +56,7 @@ class RoomInfoController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('room_info.update');
     }
 
     /**
@@ -68,7 +68,7 @@ class RoomInfoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //return view('room_info.update');
     }
 
     /**
