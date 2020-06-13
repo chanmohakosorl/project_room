@@ -18,6 +18,7 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', 'HomeController@home');
+Route::get('/create', 'RoomInfoController@create');
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

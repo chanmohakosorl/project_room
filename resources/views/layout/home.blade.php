@@ -612,7 +612,7 @@
 
      <div class="containter m-5">
        <h2 class="text-center">Room Information <hr></h2>
-       <button class="btn btn-primary">Add New</button>
+     <a href="{{url('create')}}">Add new</a>
       <table class="table table-bordered table-striped mt-3">
         <thead class="bg-secondary">
           <tr>
