@@ -17,8 +17,9 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/', 'HomeController@home');
-Route::get('/create', 'RoomInfoController@create');
-Auth::routes();
+Route::get('/room-info', 'RoomInfoController@index');
+Route::get('/create-room-info', 'RoomInfoController@create');
+Route::get('/{id}/edit-room-info', 'RoomInfoController@edit');
+//Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

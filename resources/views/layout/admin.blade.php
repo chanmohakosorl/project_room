@@ -189,7 +189,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="../room_info/index.blade.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Widgets
@@ -198,7 +198,7 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="../room_info/index.blade.php" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Layout Options
