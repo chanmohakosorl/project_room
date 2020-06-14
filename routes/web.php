@@ -26,4 +26,4 @@ Route::get('/{id}/edit-room-info', 'RoomInfoController@edit');
 
 Route::get('/room-utility', 'RoomUtilityController@index');
 Route::get('/create-room-utility', 'RoomUtilityController@create');
-Route::get('/{id}/edit-room-utility', 'RoomUtilityController@create');
+Route::get('/{id}/edit-room-utility', 'RoomUtilityController@edit');

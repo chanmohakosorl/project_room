@@ -19,12 +19,20 @@
                         </div>
                         <div class="form-group">
                             <label for="">Rent Fee</label>
-                            <input type="text" class="form-control" placeholder="Room No">
+                            <input type="text" class="form-control" placeholder="Rent Fee/Month">
                         </div>
-                        <div class="form-group">
-                            <label for="">Status</label>
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <div class="form-group row">
+                            <label class="col-sm-2">Status: </label>
+                            <div class="col-sm-10">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Available</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Busy</label>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group float-right">
                             <button class="btn btn-warning btn-md">Cancel</button>

@@ -2,7 +2,7 @@
 
 @section('content')
      <div class="containter m-5">
-       <h2 class="text-center">Room Utility Record<hr></h2>
+       <h2 class="text-center text-bold text-info p-2">Room Utility Record<hr></h2>
        <a href="{{url('create-room-utility')}}" class="btn btn-primary btn-md">Add new</a>
       <table class="table table-bordered table-striped mt-3">
         <thead class="bg-secondary">
