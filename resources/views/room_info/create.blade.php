@@ -8,14 +8,16 @@
                     <h3>Create Room Information</h3>
                 </div>
                 <div class="card-body">
-                    <form action="">
+                    <!-- <form action=""> -->
+                    <form action="{{route('room-infos.store')}}" method="POST" class="mt-4">
+                        @csrf
                         <div class="form-group">
                             <label for="">Room No</label>
-                            <input type="text" class="form-control" placeholder="Room No">
+                            <input type="text"  name="room_no" class="form-control" placeholder="Room No">
                         </div>
                         <div class="form-group">
                             <label for="">Floor</label>
-                            <input type="text" class="form-control" placeholder="Floor">
+                            <input type="text" class="form-control" name="floor" placeholder="Floor">
                         </div>
                         <div class="form-group">
                             <label for="">Rent Fee</label>

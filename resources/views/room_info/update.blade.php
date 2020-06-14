@@ -8,18 +8,21 @@
                     <h3>Create Room Information</h3>
                 </div>
                 <div class="card-body">
-                    <form action="">
+                    <!-- <form action=""> -->
+                    <form action="{{route('room-infos.update',$room_infos->id)}}" method="POST" class="mt-4">
+                        @csrf
+                        @method('put')
                         <div class="form-group">
                             <label for="">Room No</label>
-                            <input type="text" class="form-control" placeholder="Room No">
+                            <input type="text"  name="room_no" class="form-control" placeholder="Room No" value='{{$room_infos->room_no}}' required>
                         </div>
                         <div class="form-group">
                             <label for="">Floor</label>
-                            <input type="text" class="form-control" placeholder="Floor">
+                            <input type="text" class="form-control" name="floor" placeholder="Floor" value='{{$room_infos->floor}}' required>
                         </div>
                         <div class="form-group">
                             <label for="">Rent Fee</label>
-                            <input type="text" class="form-control" placeholder="Room No">
+                            <input type="text" name="rent_fee" class="form-control" placeholder="Rent Fee" value='{{$room_infos->rent_fee}}'required>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2">Status: </label>

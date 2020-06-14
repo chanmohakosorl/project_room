@@ -17,9 +17,12 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/room-info', 'RoomInfoController@index');
-Route::get('/create-room-info', 'RoomInfoController@create');
-Route::get('/{id}/edit-room-info', 'RoomInfoController@edit');
+// Route::get('/room-info', 'RoomInfoController@index');
+// Route::get('/create-room-info', 'RoomInfoController@create');
+// Route::get('/{id}/edit-room-info', 'RoomInfoController@edit');
+
+Route::resource('room-infos','RoomInfoController');
+Route::resource('room-utilities','RoomUtilityController');
 //Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
